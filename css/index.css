@@ -1,6 +1,10 @@
 .test {
   border: 1px solid red;
 }
+.flexcenter {
+  display: flex;
+  justify-content: center;
+}
 html,
 body,
 div,
@@ -90,22 +94,32 @@ video {
   vertical-align: baseline;
 }
 header nav {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
+}
+header nav a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  margin: 5% 0%;
+  padding: 0% 10px;
+}
+header nav .about {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .title-container {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
+  padding-bottom: 5%;
+  border-bottom: 1px solid black;
 }
 .title-container img {
-  border: 1px solid red;
   position: relative;
   width: 100%;
 }
 .title-container .img-content {
-  margin: 20% 0;
+  margin: 20% 0%;
   position: absolute;
   text-align: center;
   width: 40%;
@@ -121,4 +135,16 @@ header nav {
   background-color: white;
   border-radius: 5px;
   border: 1px solid white;
+}
+.artists-container {
+  display: flex;
+  justify-content: space-between;
+}
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+}
+.artists-container .artist img {
+  width: 50%;
+  height: auto;
 }
