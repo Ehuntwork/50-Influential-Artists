@@ -240,8 +240,11 @@ function getArtistByIndex(id, name) {
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(id,name) {
-  name.slice(id);
+  return delete name[id];
 }
+removeArtist(0,artists);
+console.log(artists[0]);
+console.log(artists[1]);
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
