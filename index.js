@@ -240,14 +240,8 @@ function getArtistByIndex(id, name) {
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(id,name) {
-    name.splice(id,id);
-  }
- // console.log(artists[0]);
- // removeArtist(1,artists);
- // artists.splice(0,0);
-  //console.log(artists[0]);
-   /**
-
+  name.slice(id);
+}
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
@@ -267,11 +261,16 @@ function get20s(arr){
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(arr){
+  const arrayNew = [];
+  for(let i = 0; i < arr.length; i++){
+    if ( arr[i].paintings > 100){
+      arrayNew.push(arr[i].name)
+    }
   }
+  return arrayNew;
+  }
+  //console.log(lotsOfArt(artists));///////////////////////////////////////////////////////////////////////////////////
 
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -297,18 +296,21 @@ const emily = {
     bio: 'I am emily. Emily is me. I am not you, I am me.',
   }
 addArtist(emily)
-console.log(artists[20]);
+//console.log(artists[20]);/////////////////////////////////////////////////////////////////////////////
 
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(string){
+  let check = "No";
+  for(let i = 0; i < artists.length; i++){
+    if ( artists[i].name === string){
+      check = true;
+    }
   }
-
-
+  return check;
+  }
+  //console.log(checkArtist('Emily'));
 
 
 
